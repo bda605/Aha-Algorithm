@@ -8,6 +8,15 @@ namespace _2_1解密QQ號_佇列
 {
     class Program
     {
+        /// <summary>
+        /// 實作一個佇列
+        /// </summary>
+        static class  queue
+        {
+            static int[] data = new int[100];
+            static int head;
+            static int tail;
+        }
         static void Main(string[] args)
         {
 
