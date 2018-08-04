@@ -20,12 +20,14 @@ namespace _5_1深度和廣度優先究竟是什麼
     }
     class Program
     {
-
+        //bfs廣度優先搜索
+        //static Queue<int> data = new Queue<int>();
         static List<int> temp = new List<int>();
         static void dfs(int num)
-        { 
+        {
+            //dfs深度優先搜索
             Queue<int> data = new Queue<int>();
-       
+
             l.ForEach(x =>
             {
                 if(x.book == 0)
