@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace _3_1天公伯啊_奧林匹克數學題_解2
 {
@@ -37,8 +38,12 @@ namespace _3_1天公伯啊_奧林匹克數學題_解2
             Console.WriteLine(" □ □ □ + □ □ □ = □ □ □");
             book = new int[10];
             square = new int[10];
+            Stopwatch time = new Stopwatch();
+            time.Start();
             dfs(1);
-            Console.WriteLine($"Ans : {ans/2} 組 解");
+            time.Stop();
+            Console.WriteLine($"Ans : {ans/2} 組 解");            
+            Console.WriteLine($"耗時： {time.Elapsed}");
             Console.Read();
         }
     }

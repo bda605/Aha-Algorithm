@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace _3_1天公伯啊_奧林匹克數學題
 {
@@ -15,7 +16,9 @@ namespace _3_1天公伯啊_奧林匹克數學題
             Console.WriteLine("試問有幾種組合");
             int[] book = new int[11];
             int[] a = new int[10];
-            int ans=0;      
+            int ans=0;
+            Stopwatch time = new Stopwatch();
+            time.Start();
             for( a[1]=1; a[1] <= 9; a[1]++)
                 for (a[2] = 1; a[2] <= 9; a[2]++)
                     for (a[3] = 1; a[3] <= 9; a[3]++)
@@ -37,8 +40,9 @@ namespace _3_1天公伯啊_奧林匹克數學題
                                                         Console.WriteLine($"{a[1]}{a[2]}{a[3]} + {a[4]}{a[5]}{a[6]} = {a[7]}{a[8]}{a[9]}");
                                                     }
                                             }
-                                                
+            time.Stop();                                     
             Console.WriteLine($"Ans : {ans/2} 種");
+            Console.WriteLine($"耗時： {time.Elapsed}");
             Console.Read();
         }
     }
